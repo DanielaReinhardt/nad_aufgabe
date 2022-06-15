@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de" xmls:th="http://thymeleaf.org">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete a RAST</title>
+
+</head>
+
+<body>
+
+    <form action="#" th:action="@'/update/{id}'{id=${location.id})}" th:object="location" th:method="update">
+        <input type="text" th:field="*{Ort}">
+        <input type="text" th:field="*{PLZ}">
+        <input type="text" th:field="*{Straße}">
+        <input type="text" th:field="*{Hausnummer}">
+        <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>

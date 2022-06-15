@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<title>RAST</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+</head>
+<body>
+<h1>alle RAST</h1>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Ort</th>
+            <th>PLZ</th>
+            <th>Straße</th>
+            <th>Hausnummer</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr th:each="locations : ${location}">
+        <td th:text="${locations.Ort}">Ort</td>
+        <td th:text="${locations.PLZ}">PLZ</td>
+        <td th:text="${locations.Straße}">Straße</td>
+        <td th:text="${locations.Hausnummer}">Hausnummer</td>
+
+
+    </tr>
+</tbody>
+</table>
+
+
+<div><a href="/create">create a new RAST</a></div>
+<div><a href="/delete">delete a RAST</a></div>
+<div><a href="/update">update a RAST</a></div>
+<div><a href="/location">find a RAST</a></div>
+
+</body>
+</html>

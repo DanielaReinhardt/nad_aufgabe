@@ -1,0 +1,22 @@
+Aachen	52070	Am Gut Wolf	9a
+Bamberg	96050	Gutenbergstr.	13
+Bamberg	96052	Memmelsdorfer Str.	209a
+Berlin	13509	Holzhauser Str.	 4-8
+Berlin	10117	Französische Str.	33a-c
+Bielefeld	33605	Detmolder Str.	380
+Bielefeld	33602	Philipp-Reis-Platz	1
+Bonn	53113	Friedrich-Ebert-Allee	140
+Bonn	53227	Landgrabenweg	151
+Bonn	53227	Oberkasseler Str.	2
+Bonn	53113	Bonner Talweg	100
+Bremen	28217	Utbremer Str.	 97-99
+Bremen	28217	Utbremer Str.	94
+Chemnitz	9111	Strasse der Nationen	76
+Chemnitz	9126	Clausstr.	3
+Darmstadt	64295	Deutsche-Telekom-Allee	9
+Darmstadt	64295	Heinrich-Hertz-Str.	  3-7
+Darmstadt	64295	Ida-Rhodes-Str.	2
+Darmstadt	64295	Deutsche-Telekom-Allee	5
+Dresden	1067	Annenstr.	5
+Dresden	1099	Melitta-Bentz-Str.	8
+Düsseldorf	40547	Am Seestern	3

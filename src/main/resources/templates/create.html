@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de" xmls:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create new RAST</title>
+
+</head>
+
+<body>
+    <form method="post" th:action="@{/create}" th:object="${location}">
+        <input name="Ort" th:field="*{Ort}">
+        <input name="PLZ" th:field="*{PLZ}">
+        <input name="Straße" th:field="*{Straße}">
+        <input name="Hausnummer" th:field="*{Hausnummer}"><br>
+        <input type="button" type="submit" value="save">
+    </form>
+</body>
+
+
+<div><a href="/">Show all RAST</a></div>
+<div><a href="/delete">delete a RAST</a></div>
+<div><a href="/update">update a RAST</a></div>
+<div><a href="/location">find a RAST</a></div>
+
+</html>
