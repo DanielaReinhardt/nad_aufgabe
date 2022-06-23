@@ -18,22 +18,22 @@
         </tr>
     </thead>
 <tbody>
-    <tr th:each="locations : ${location}">
-        <td th:text="${locations.Ort}">Ort</td>
-        <td th:text="${locations.PLZ}">PLZ</td>
-        <td th:text="${locations.Straße}">Straße</td>
-        <td th:text="${locations.Hausnummer}">Hausnummer</td>
+    <tr th:each="location : ${locations}">
+        <td th:text="${location.ort}">Ort</td>
+        <td th:text="${location.pLZ}">PLZ</td>
+        <td th:text="${location.strasse}">Straße</td>
+        <td th:text="${location.hausnummer}">Hausnummer</td>
+        <td><a th:href="@{/updateform/(id=${location.id})}">Update</a></td>
+        <td><a th:href="@{/delete/(id=${location.id})}">Delete</a> </td>
 
 
     </tr>
 </tbody>
 </table>
 
-
+<!-- muss noch aktualisiert werden (location)auf die richtigen Links -->
 <div><a href="/create">create a new RAST</a></div>
-<div><a href="/delete">delete a RAST</a></div>
-<div><a href="/update">update a RAST</a></div>
-<div><a href="/location">find a RAST</a></div>
+
 
 </body>
 </html>

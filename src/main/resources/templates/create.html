@@ -8,19 +8,17 @@
 </head>
 
 <body>
-    <form method="post" th:action="@{/create}" th:object="${location}">
-        <input name="Ort" th:field="*{Ort}">
-        <input name="PLZ" th:field="*{PLZ}">
-        <input name="Straße" th:field="*{Straße}">
-        <input name="Hausnummer" th:field="*{Hausnummer}"><br>
-        <input type="button" type="submit" value="save">
+    <form action="#" th:action="@{/create/{id}(id=${location.id})}" th:object="${location}" th:method="post">
+        <input type="text" th:field="*{ort}" placeholder="Ort">
+        <input type="text" th:field="*{pLZ}" placeholder="PLZ">
+        <input type="text" th:field="*{strasse}" placeholder="Straße">
+        <input type="text" th:field="*{hausnummer}" placeholder="Hausnummer"><br>
+        <button type="submit" value="Submit">Save</button>
     </form>
 </body>
 
-
+<!-- links müssen aktualisiert werden -->
 <div><a href="/">Show all RAST</a></div>
-<div><a href="/delete">delete a RAST</a></div>
-<div><a href="/update">update a RAST</a></div>
-<div><a href="/location">find a RAST</a></div>
+
 
 </html>

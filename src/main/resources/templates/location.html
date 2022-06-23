@@ -8,6 +8,14 @@
 </head>
 
 <body>
+
+    <!-- template geht nicht -->
+    <form action="#" th:action="@{/location/{id}(id=${location.id})}" th:object ="location" th:method="get">
+    <input type="text" th:field=${location.id}>
+    <button type="submit" >search</button>
+    
+    </form>
+
     <thead>
         <table>
             <tr>
@@ -20,12 +28,12 @@
     </thead>
 
     <tbody>
-            <tr th:each="locations : §{location}">
+            <tr th:each="location : ${locations}">
                 
-                <td th:text="${locations.Ort}">Ort</td>
-                <td th:text="${locations.PLZ}">PLZ</td>
-                <td th:text="${locations.Straße}">Straße</td>
-                <td th:text="${locations.Hausnummer}">Hausnummer</td>
+                <td th:text="${location.ort}">Ort</td>
+                <td th:text="${location.pLZ}">PLZ</td>
+                <td th:text="${location.strasse}">Straße</td>
+                <td th:text="${location.hausnummer}">Hausnummer</td>
 
             </tr>
 
@@ -38,8 +46,6 @@
 
 
 <div><a href="/">Show all RAST</a></div>
-<div><a href="/delete">delete a RAST</a></div>
-<div><a href="/update">update a RAST</a></div>
-<div><a href="/location">find a RAST</a></div>
+
 </body>
 </html>

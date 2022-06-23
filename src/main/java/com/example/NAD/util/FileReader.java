@@ -1,45 +1,59 @@
-package util;
+package com.example.NAD.util;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import com.example.NAD.Entity.Location;
+import com.example.NAD.repository.LocationRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import Entity.Location;
-import repository.LocationRepository;
-
+@Component
 public class FileReader {
 
     @Autowired
     private LocationRepository repository;
 
-    private static File INPUT_FILE = new File("resources/Liste.txt"); // alternativ gesamter Pfad
+    private static File INPUT_FILE = new File("src/main/resources/Liste.txt"); // alternativ gesamter Pfad
     // static Elemente werden komplett groß geschrieben
 
     public void read() throws IOException, NullPointerException {
         String ort;
         int pLZ;
-        String straße;
+        String strasse;
         String hausnummer;
 
-        List<Location> locations = new ArrayList<>();
+        //List<Location> locations = new ArrayList<>();
         List<String> lines = new ArrayList<>();
-        Files.readAllLines(INPUT_FILE.toPath());
+        lines = Files.readAllLines(INPUT_FILE.toPath());
         for (String line : lines) {
             String[] lineSplit = line.split("\t"); // soll als Tabulator gelten
 
             ort = lineSplit[0];
             pLZ = Integer.parseInt(lineSplit[1]);
-            straße = lineSplit[2];
+            strasse = lineSplit[2];
             hausnummer = lineSplit[3];
-            locations.add(new Location(ort, pLZ, straße, hausnummer));
-
+            //locations.add(new Location(ort, pLZ, straße, hausnummer));
+            
+            repository.save(new Location(ort, pLZ, strasse, hausnummer));
+            
+            //repository.saveAll(locations);
         }
-        repository.saveAll(locations); // das soll das ganze in die Datenbank speichern
-
+        
+        
+        // for(Location loc : locations){
+        //     System.out.println(loc.getOrt());
+        //     System.out.println(loc.getpLZ());
+        //     System.out.println(loc.getStraße());
+        //     System.out.println(loc.getHausnummer());
+           
+        // }
+    
     }
 }
 
