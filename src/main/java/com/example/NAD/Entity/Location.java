@@ -30,9 +30,6 @@ public class Location {
    
 
 
-    public Location(Location location) {
-    }
-
     public Long getId() {
         return id;
     }
