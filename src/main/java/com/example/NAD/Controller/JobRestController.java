@@ -46,7 +46,7 @@ public class JobRestController {
     @PostMapping
     public Location create(@RequestBody Location location) {
         // nachlesen wegen Annotations Spring https://spring.io/guides/tutorials/rest/
-        Location location2 = repository.save(new Location(location));
+        Location location2 = repository.save(location); //nicht mit new Location, das macht Spring
 
         return location2;
 

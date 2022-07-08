@@ -9,7 +9,7 @@ import com.example.NAD.Entity.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface LocationRepository extends JpaRepository<Location, Long> {
+public interface LocationRepository extends JpaRepository<Location, Long> { //name of the modelclass and the primary key
 
     Optional<Location> findById(Long id);
 
